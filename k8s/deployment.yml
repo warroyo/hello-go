@@ -4,7 +4,10 @@ metadata:
   name: hello-go
   labels: {app: hello-go}
 spec:
-  replicas: 1
+  replicas: 3
+  selector:
+    matchLabels:
+      app: hello-go
   template:
     metadata: {labels: {app: hello-go}}
     spec:
